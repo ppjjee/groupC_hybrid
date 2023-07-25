@@ -215,10 +215,11 @@ def page1(imgs, cb):
     # st.markdown("✔️ Please select a sample image. We recommend music that matches the selected image.")
     scenario = st.radio(
     "Please select a scenario that you preferred the most.",
-    ('Feeling tired but unable to sleep: Search for music to listen to in such a situation.', 
-    'During exercise (yoga or fitness, etc.): Search for music to listen to in such a situation.', 
-    'Preparing for a party: Search for music to listen to in such a situation.'))
-    st.markdown("✔️ STEP 2: Click on the image that best represents your selected scenario. After selecting an image, please wait for a while until the next process.")
+    ('Feeling tired but unable to sleep.', 
+    'During exercise (yoga or fitness, etc.).', 
+    'Preparing for a party.'))
+    st.markdown("✔️ STEP 2: Click on the image that best represents your selected scenario. We will find music that matches your chosen image.")
+    st.markdown("✔️ STEP 3: After selecting an image, please wait for a while until the next process.")
     
     st.markdown(hide_menu, unsafe_allow_html = True)
 
@@ -353,11 +354,12 @@ def page2(imgs, cb):
     # st.markdown("✔️ Please select a sample image. We recommend music that matches the selected image.")
     scenario = st.radio(
     "Please select a scenario that you preferred the most.",
-    ('Want to discover a new music: Search for music to listen to in such a situation.', 
-    'Playing with a child: Search for music to listen to in such a situation.', 
-    'Studying or working: Search for music to listen to in such a situation.'))
-    st.markdown("✔️ STEP 2: Click on the image that best represents your selected scenario. After selecting an image, please wait for a while until the next process.")
-    
+    ('Want to discover a new music.', 
+    'Playing with a child.', 
+    'Studying or working.'))
+    st.markdown("✔️ STEP 2: Click on the image that best represents your selected scenario. We will find music that matches your chosen image.")
+    st.markdown("✔️ STEP 3: After selecting an image, please wait for a while until the next process.")
+
     st.markdown(hide_menu, unsafe_allow_html = True)
 
     save_path = st.experimental_get_query_params()['path'][0]
@@ -490,11 +492,12 @@ def page3(imgs, cb):
     # st.markdown("✔️ Please select a sample image. We recommend music that matches the selected image.")
     scenario = st.radio(
     "Please select a scenario that you preferred the most.",
-    ('Commuting to and from work: Search for music that matches your current mood in such a situation.', 
-    'Driving: Search for music that matches your current mood in such a situation.', 
-    'Emotional early morning hours: Search for music that matches your current mood in such a situation.'))
-    st.markdown("✔️ STEP 2: Click on the image that best represents your selected scenario. After selecting an image, please wait for a while until the next process.")
-    
+    ('Commuting to and from work.', 
+    'While driving or before driving.', 
+    'Emotional early morning hours.'))
+    st.markdown("✔️ STEP 2: Click on the image that best represents your selected scenario. We will find music that matches your chosen image.")
+    st.markdown("✔️ STEP 3: After selecting an image, please wait for a while until the next process.")
+
     st.markdown(hide_menu, unsafe_allow_html = True)
 
     save_path = st.experimental_get_query_params()['path'][0]
@@ -807,7 +810,7 @@ def survey_page():
             ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
         
         situation = st.text_input(
-            "If this system becomes commercially available, in what situations do you think you will use it? (Example: When I want to listen to new music, but it is difficult to express my search terms in text.")
+            "If this system becomes commercially available, in what situations do you think you will use it? (Example: When I want to listen to new music, but it is difficult to express my search terms in text.)")
 
         if not situation:
             st.warning("Please kindly provide a response to the question.")
