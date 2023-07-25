@@ -171,8 +171,8 @@ mood_imgs = [
                 'https://github.com/ppjjee/MuFiB/blob/main/images/space_background_love.jpg?raw=true',
                 'https://github.com/ppjjee/MuFiB/blob/main/images/calm.jpg?raw=true',       
                 'https://github.com/ppjjee/MuFiB/blob/main/images/holiday_romantic_party.jpg?raw=true', # 1번째로 이동
-                'https://github.com/ppjjee/MuFiB/blob/main/images/relaxing.jpg?raw=true', # 1번째로 이동      
-                'https://github.com/ppjjee/MuFiB/blob/main/images/travel.jpg?raw=true', # 1번째로 이동
+                'https://github.com/ppjjee/MuFiB/blob/main/images/calm_relaxing.jpg?raw=true', # 1번째로 이동      
+                'https://github.com/ppjjee/MuFiB/blob/main/images/relaxing.jpg?raw=true', # 1번째로 이동
                 'https://github.com/ppjjee/MuFiB/blob/main/images/party.jpg?raw=true', # 1번째로 이동
                 'https://github.com/ppjjee/MuFiB/blob/main/images/holiday_party_summer.jpg?raw=true', # 1번째로 이동
             ]
@@ -686,7 +686,7 @@ def createAudio(filename):
 ## streamlit display codes
 def music_page(cb):
     st.title('Music Finder 🎵')
-    st.subheader("Now, we find music lists that match the image!")
+    st.subheader("Now, we find music lists that match the image and keywords!")
     st.caption('- The music searched in this study is a copyright-free sound sources provided for research purposes.')
     st.caption('- Therefore, we inform you that it may be different from the latest music you are familiar with.')
     st.write('-----')
@@ -704,8 +704,8 @@ def music_page(cb):
     ## save results
     with st.container():
         # satis_result = st.slider('Do you think the retrieved music represents the selected image well?', min_value=0, max_value=100, value=50, step=1)
-        satis_result = st.select_slider('Overall, do you think the retrieved music matches the selected images well?', options=['Strongly disagree', 'Disagree', 'Somewhat disagree', 'Neither agree nor disagree', 'Somewhat agree', 'Agree', 'Strongly agree'], value='Neither agree nor disagree')
-        st.caption("- Note: Please evaluate how well the selected image represents the music, rather than providing a 'like' or 'dislike' rating for the provided music.")
+        satis_result = st.select_slider('Overall, do you think the retrieved music matches the selected images and added keywords well?', options=['Strongly disagree', 'Disagree', 'Somewhat disagree', 'Neither agree nor disagree', 'Somewhat agree', 'Agree', 'Strongly agree'], value='Neither agree nor disagree')
+        st.caption("- Note: Please evaluate how well the selected image and added keywords represent the music, rather than providing a 'like' or 'dislike' rating for the provided music.")
         st.write('-----')
     
         save_path = st.experimental_get_query_params()['path'][0]
