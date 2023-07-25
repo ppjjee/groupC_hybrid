@@ -1,4 +1,9 @@
 # Byte-compiled / optimized / DLL files
+results
+music_data
+*.tsv
+.streamlit
+
 __pycache__/
 *.py[cod]
 *$py.class
