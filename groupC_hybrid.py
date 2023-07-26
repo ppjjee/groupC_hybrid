@@ -770,45 +770,69 @@ def survey_page():
         st.write('-----')
 
         sus1 = st.radio(
-            "I think that I would like to use this system frequently.",
-            ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
+            "Overall, I am satisfied with how easy it is to use this system.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
 
         sus2 = st.radio(
-            "I found the system unnecessarily complex.",
-            ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
+            "It was simple to use this system.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
         
         sus3 = st.radio(
-            "I thought that the system was easy to use.",
-            ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
+            "I was able to complete the tasks and scenarios quickly using this system.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
 
         sus4 = st.radio(
-            "I think that I would need the support of a technical person to be able to use this system.",
-            ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
+            "I felt comfortable using this system.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
 
         sus5 = st.radio(
-            "I found the various functions in this system were well integrated.",
-            ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
+            "It was easy to learn to use this system.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
         
         sus6 = st.radio(
-            "I thought there was too much inconsistency in this system.",
-            ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
+            "I believe I could become productive quickly using this system.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
 
         sus7 = st.radio(
-            "I would imagine that most people would learn to use this system very quickly.",
-            ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
+            "The system gave error messages that clearly told me how to fix problems.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
 
         sus8 = st.radio(
-            "I found the system very cumbersome to use.",
-            ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
+            "Whenever I made a mistake using the system, I could recover easily and quickly.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
 
         sus9 = st.radio(
-            "I felt vey confident using the system.",
-            ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
+            "The information provided with this system was clear.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
 
         sus10 = st.radio(
-            "I needed to learn a lot of things before I could get going with this system.",
-            ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
-        
+            "It was easy to find the information I needed.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
+
+        sus11 = st.radio(
+            "The information was effective in helping me complete the tasks and scenarios.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
+
+        sus12 = st.radio(
+            "The organization of information on the system screens was clear.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
+
+        sus13 = st.radio(
+            "The interface of this system was pleasant.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
+
+        sus14 = st.radio(
+            "I liked using the interface of this system.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
+
+        sus15 = st.radio(
+            "This system has all the functions and capabilities I expect it to have.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
+
+        sus16 = st.radio(
+            "Overall, I am satisfied with this system.",
+            ('Strongly Agree', 'Agree', 'Somewhat Agree', 'Niether Agree Nor Disagree', 'Somewhat Disagree', 'Disagree', 'Strongly Disagree'))
+
         situation = st.text_input(
             "If this system becomes commercially available, in what situations do you think you will use it? (Example: When I want to listen to new music, but it is difficult to express my search terms in text.)")
 
@@ -821,7 +845,7 @@ def survey_page():
         if not improved:
             st.warning("Please kindly provide a response to the question.")
         st.write('-----')
-        
+
         st.markdown('Please read the question and choices carefully before providing your answer.')
         
         ux1 = st.select_slider('Was the system obstructive or supportive?',options=['Obstructive: 0', 1, 2, 3, 4, 5, 6, 'Supportive: 7'], value=4)
@@ -905,7 +929,8 @@ def survey_page():
             results_B = {'gender': gender, 'age': age, 'education': education, 'ethnicity': ethnicity,
              'service':service, 'inconvenient':inconvenient, 'sus1': sus1, 'sus2': sus2, 'sus3': sus3, 
              'sus4': sus4, 'sus5': sus5, 'sus6': sus6, 'sus7': sus7, 'sus8': sus8,'sus9': sus9,
-             'sus10': sus10, 'situation': situation, 'improved': improved,
+             'sus10': sus10, 'sus11': sus11, 'sus12': sus12, 'sus13': sus13, 'sus14': sus14, 'sus15': sus15,
+             'sus16': sus16, 'situation': situation, 'improved': improved,
              'ux1': ux1, 'ux2': ux2, 'ux3': ux3, 'ux4': ux4, 'ux5': ux5, 'ux6': ux6, 
              'ux7': ux7, 'ux8': ux8, 'workerID' : id
              }
