@@ -175,6 +175,7 @@ mood_imgs = [
                 'https://github.com/ppjjee/MuFiB/blob/main/images/relaxing.jpg?raw=true', # 1번째로 이동
                 'https://github.com/ppjjee/MuFiB/blob/main/images/party.jpg?raw=true', # 1번째로 이동
                 'https://github.com/ppjjee/MuFiB/blob/main/images/holiday_party_summer.jpg?raw=true', # 1번째로 이동
+                'https://github.com/ppjjee/groupA/blob/main/theme/sport.jpg?raw=true'
             ]
 mood_imgs2 = [
                 'https://github.com/ppjjee/MuFiB/blob/main/images/dream_positive_happy.jpg?raw=true',
